@@ -4,11 +4,14 @@ This is a wrapper for the [leaflet-fullscreen control](https://github.com/Leafle
 
 This wrapper is tested against the [@asymettrik/ngx-leaflet](https://github.com/Asymmetrik/ngx-leaflet) library but it has no dependency on that library so *should* work without it.
 
+for an example of this working - see trackbash.co.uk.
+
 # Install
 
 Install using npm:
 
 ```
+npm install leaflet-fullscreen
 npm install @runette/ngx-leaflet-fullscreen
 ```
 
@@ -38,7 +41,7 @@ Where `map` is an instance of a leaflet map and `options` is an object with vali
 
 # Usage with NGX-Leaflet
 
-This library integrates very easily with ngx-leaflet using the onMapReady event.
+This library integrates very easily with ngx-leaflet using the onMapReady event:
 
 ```
 <div id='map' class="map-container" leaflet
@@ -49,4 +52,37 @@ This library integrates very easily with ngx-leaflet using the onMapReady event.
     [map]="map"
     [options]="fullscreenOptions"
     ></leaflet-fullscreen-control>
+```
+by adding the following to your map component:
+
+```
+...
+import { Map } from 'leaflet';
+
+
+export class OsmMapComponent implements OnInit, OnDestroy {
+  public map: Map;
+  public fullscreenOptions: {[key:string]:any} = {
+    position: 'topleft',
+    title: 'View Fullscreen',
+    titleCancel: 'Exit Fullscreen',
+  };
+  
+  ...
+  
+  onMapReady(map: Map) {
+    this.map = map;
+  }
+```
+
+# Usage - CSS
+
+Unfortunately - I think because the leaflet map is run outside of Angular by ngx-leaflet - the normal css encapsulation does not work and you have to load the css globally.
+
+Add the following to the angular.json 
+
+```
+"styles": [
+              "./node_modules/leaflet-fullscreen/dist/leaflet.fullscreen.css",
+            ],
 ```
