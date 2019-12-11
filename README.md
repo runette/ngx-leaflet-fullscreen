@@ -83,6 +83,7 @@ Add the following to the angular.json
 
 ```
 "styles": [
+              ...
               "./node_modules/leaflet-fullscreen/dist/leaflet.fullscreen.css",
             ],
 ```
