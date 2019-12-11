@@ -1,6 +1,10 @@
 {
   "name": "@runette/ngx-leaflet-fullscreen",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Angular wrapper for the Leaflet-fullscreen control",
+  "keywords": ["angular", "leaflet", "control", "fullscreen"],
+  "homepage": "https://github.com/runette/ngx-leaflet-fullscreen",
+  "licence": "MIT",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
