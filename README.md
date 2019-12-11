@@ -4,7 +4,7 @@ This is a wrapper for the [leaflet-fullscreen control](https://github.com/Leafle
 
 This wrapper is tested against the [@asymettrik/ngx-leaflet](https://github.com/Asymmetrik/ngx-leaflet) library but it has no dependency on that library so *should* work without it. It does, obviously, have a dependency that leaflet is loaded.
 
-for an example of this working - see [trackbash](trackbash.co.uk).
+for an example of this working - see [trackbash](https://trackbash.co.uk).
 
 # Install
 
