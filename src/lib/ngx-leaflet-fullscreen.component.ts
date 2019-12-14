@@ -30,14 +30,15 @@ export class FullscreenControlComponent implements OnInit, OnDestroy {
   @Input() options: {[name:string]:any} = {};
 
   @Input() set map(map: Map){
-    this._map = map;
-    this.control = control.fullscreen(this.options)
-    this.control.addTo(map);
-    map.on('enterFullscreen', () => map.invalidateSize());
-    map.on('exitFullscreen', () => map.invalidateSize());
-  }
+    if (map) { 
+      this._map = map;
+      this.control = control.fullscreen(this.options)
+      this.control.addTo(map);
+      map.on('enterFullscreen', () => map.invalidateSize());
+      map.on('exitFullscreen', () => map.invalidateSize());
+    };
+  };
   get map(): Map {
     return this._map
-  }
-
-}
+  };
+};
