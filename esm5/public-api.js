@@ -1,0 +1,8 @@
+/**
+ * @fileoverview added by tsickle
+ * Generated from: public-api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export { FullscreenControlComponent } from './lib/ngx-leaflet-fullscreen.component';
+export { NgxLeafletFullscreenModule } from './lib/ngx-leaflet-fullscreen.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BydW5ldHRlL25neC1sZWFmbGV0LWZ1bGxzY3JlZW4vIiwic291cmNlcyI6WyJwdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsMkNBQWMsd0NBQXdDLENBQUM7QUFDdkQsMkNBQWMscUNBQXFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tICcuL2xpYi9uZ3gtbGVhZmxldC1mdWxsc2NyZWVuLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZ3gtbGVhZmxldC1mdWxsc2NyZWVuLm1vZHVsZSc7XG4iXX0=
