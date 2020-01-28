@@ -1,9 +1,9 @@
 import { OnInit, OnDestroy } from '@angular/core';
-import { Map, FullscreenOptions } from 'leaflet';
+import { Map, Control, FullscreenOptions } from 'leaflet';
 import '../../../../node_modules/@runette/leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 export declare class FullscreenControlComponent implements OnInit, OnDestroy {
     private _map;
-    private control;
+    control: Control.Fullscreen;
     constructor();
     ngOnInit(): void;
     ngOnDestroy(): void;

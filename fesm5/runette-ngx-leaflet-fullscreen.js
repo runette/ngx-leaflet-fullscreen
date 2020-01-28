@@ -218,7 +218,9 @@ var FullscreenControlComponent = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        this.map.removeControl(this.control);
+        this._map.removeControl(this.control);
+        this._map.off('enterFullscreen');
+        this._map.off('exitFullscreen');
     };
     Object.defineProperty(FullscreenControlComponent.prototype, "map", {
         get: /**
@@ -272,10 +274,7 @@ if (false) {
      * @private
      */
     FullscreenControlComponent.prototype._map;
-    /**
-     * @type {?}
-     * @private
-     */
+    /** @type {?} */
     FullscreenControlComponent.prototype.control;
     /** @type {?} */
     FullscreenControlComponent.prototype.options;

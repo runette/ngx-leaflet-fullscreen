@@ -1,13 +1,8 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
-import {Map, control, Control} from 'leaflet';
-import * as L from 'leaflet';
-import '../../../../node_modules/leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 
-declare module 'leaflet' {
-  namespace control {
-      function fullscreen(v: any): Control;
-    }
-}
+/// <reference types='@runette/leaflet-fullscreen'/>
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import {Map, control, Control, FullscreenOptions} from 'leaflet';
+import '../../../../node_modules/@runette/leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 
 @Component({
   selector: 'leaflet-fullscreen-control',
@@ -16,7 +11,7 @@ declare module 'leaflet' {
 })
 export class FullscreenControlComponent implements OnInit, OnDestroy {
   private _map: Map;
-  private control: Control;
+  public control: Control.Fullscreen;
 
   constructor() { }
 
@@ -24,10 +19,12 @@ export class FullscreenControlComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.map.removeControl(this.control)
+    this._map.removeControl(this.control);
+    this._map.off('enterFullscreen');
+    this._map.off('exitFullscreen')
   }
 
-  @Input() options: {[name:string]:any} = {};
+  @Input() options: FullscreenOptions = {};
 
   @Input() set map(map: Map){
     if (map) { 
