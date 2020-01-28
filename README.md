@@ -4,7 +4,11 @@ This is a wrapper for the [leaflet-fullscreen control](https://github.com/Leafle
 
 This wrapper is tested against the [@asymmetrik/ngx-leaflet](https://github.com/Asymmetrik/ngx-leaflet) library but it has no dependency on that library so *should* work without it. It does, obviously, have a dependency that leaflet is loaded.
 
-for an example of this working - see [trackbash](https://trackbash.co.uk).
+For more detailed descriptions of how this wrapper was created : [Documentation](https://runette.gitbook.io/alcm/).
+
+For detailed descriptions of how to use and worked examples : [Article](https://medium.com/runic-software/quick-guide-to-leaflet-controls-in-angular-io-1b35d0807bdb), [Article](https://medium.com/runic-software/advanced-interactive-maps-in-angular-with-leaflet-68baafa03f72)
+
+For an example of this working in a real site - see [trackbash](https://trackbash.co.uk).
 
 # Install
 
@@ -82,16 +86,8 @@ export class OsmMapComponent implements OnInit, OnDestroy {
 
 Unfortunately - I think because the leaflet map is run outside of Angular by ngx-leaflet - the normal css encapsulation does not work and you have to load the css globally.
 
-Add the following to the angular.json
+Add the following to the styles.css
 
-```JSON
-"styles": [
-              ...
-              "./node_modules/@runette/leaflet-fullscreen/dist/leaflet.fullscreen.css",
-            ],
-```
-
-or the following to styles.css
 ```CSS
 @import "@runette/leaflet-fullscreen/dist/leaflet.fullscreen.css";
 ```
@@ -101,3 +97,18 @@ or the following to styles.css
 For some reason yet to be found - this library does not like being built with `"buildOptimizer": true,` in the build environment - which is usually the default for the production environment in `angular.json`.
 
 Always build with `"buildOptimizer": false,`.
+
+
+# API Access to the Control
+
+If you want access the control's methods directly from your typescript code - this can be done with `@ViewChild`
+
+Use `ViewChild` to access the component, for instance 
+
+```ts
+@ViewChild(FullscreenControlComponent,{static: false}) fullscreenComponent: FullscreenControlComponent;
+```
+
+The actual instance of the control can then be accessed directly as `this.fullscreenComponent.control`
+
+For more details and worked examples, see : [Article](https://medium.com/runic-software/advanced-interactive-maps-in-angular-with-leaflet-68baafa03f72)
