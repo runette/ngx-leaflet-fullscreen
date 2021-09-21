@@ -1,6 +1,6 @@
 {
   "name": "@runette/ngx-leaflet-fullscreen",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Paul Harwood",
   "description": "Angular wrapper for the Leaflet-fullscreen control",
   "keywords": [
@@ -10,16 +10,21 @@
     "fullscreen",
     "leaflet-fullscreen"
   ],
-  "repository": "https://github.com/runette/ngx-leaflet-fullscreen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runette/ngx-leaflet-fullscreen.git"
+  },
   "homepage": "https://github.com/runette/ngx-leaflet-fullscreen",
-  "bugs": "https://github.com/runette/ngx-leaflet-fullscreen/issues",
+  "bugs": {
+    "url": "https://github.com/runette/ngx-leaflet-fullscreen/issues"
+  },
   "licence": "MIT",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
   },
   "dependencies": {
-    "@runette/leaflet-fullscreen": "^1.0.4",
+    "@runette/leaflet-fullscreen": "^1.0.5",
     "tslib": "^1.9.0"
   },
   "main": "bundles/runette-ngx-leaflet-fullscreen.umd.js",
@@ -31,5 +36,12 @@
   "fesm2015": "fesm2015/runette-ngx-leaflet-fullscreen.js",
   "typings": "runette-ngx-leaflet-fullscreen.d.ts",
   "metadata": "runette-ngx-leaflet-fullscreen.metadata.json",
-  "sideEffects": false
+  "sideEffects": false,
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
 }
