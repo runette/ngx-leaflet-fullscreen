@@ -46,6 +46,12 @@ Then, the control is inserted using the following directive:
 
 Where `map` is an instance of a leaflet map and `options` is an object with valid options for the control.
 
+Sometimes, Angular cannot find the correct typings. In this case, add the following directive as the first line of the .ts script:
+
+```
+/// <reference types='@runette/leaflet-fullscreen' />
+```
+
 # Usage with NGX-Leaflet
 
 This library integrates very easily with ngx-leaflet using the onMapReady event:
