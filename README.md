@@ -107,6 +107,7 @@ For some reason yet to be found - this library does not like being built with `"
 Always build with `"buildOptimizer": false,`.
 
 
+<<<<<<< HEAD
 # API Access to the Control
 
 If you want access the control's methods directly from your typescript code - this can be done with `@ViewChild`
@@ -116,7 +117,23 @@ Use `ViewChild` to access the component, for instance
 ```ts
 @ViewChild(FullscreenControlComponent,{static: false}) fullscreenComponent: FullscreenControlComponent;
 ```
+=======
+    npm install
+    npm run test
+    npm run uglifyjs
+    npm run sass
+>>>>>>> 27056dc (Rework Legacy PNG Icons with Font Awesome SVG)
 
 The actual instance of the control can then be accessed directly as `this.fullscreenComponent.control`
 
+<<<<<<< HEAD
 For more details and worked examples, see : [Article](https://medium.com/runic-software/advanced-interactive-maps-in-angular-with-leaflet-68baafa03f72)
+=======
+Leaflet 1.0 and later is supported. Earlier versions may work, but are not tested.
+
+### License
+
+ISC
+
+SVG icons from [Font Awesome v5.15.4](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4): [Creative Commons Attribution 4.0](https://fontawesome.com/license/free)
+>>>>>>> 27056dc (Rework Legacy PNG Icons with Font Awesome SVG)

@@ -1,10 +1,11 @@
 {
-  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngx-leaflet-fullscreen",
+  "$schema": "node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "dist/ngx-leaflet-fullscreen",
   "lib": {
     "entryFile": "src/public-api.ts"
   },
-  "whitelistedNonPeerDependencies": [
-    "leaflet-fullscreen"
+  "allowedNonPeerDependencies":[
+    "@runette/leaflet-fullscreen",
+    "@types/leaflet"
   ]
 }
