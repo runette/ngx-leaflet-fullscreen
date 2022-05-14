@@ -17,11 +17,14 @@ Install using npm:
 ```
 npm install @runette/ngx-leaflet-fullscreen
 ```
+>
+>NOTE - after version 1.0.6 - this library is built using ng-packagr and an Ivy partial comppile. This should allow compatability with any version of Angular.io after >v12.0.0 (according to the Angular docs).
+>
 
 >
 > Note : this package currently installs a _fork_ of leaflet-fullscreen : [@runette/leaflet-fullscreen](https://github.com/runette/Leaflet.fullscreen).
 >
->This is because the root repo has not been updated with several important PRs and has not been changed for a year.
+>This is because the root repo has not been updated with several important PRs and has not been changed for 4 years.
 # Usage
 
 This library needs to be imported into the application module:
