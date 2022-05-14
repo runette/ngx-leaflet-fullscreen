@@ -12,9 +12,9 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-leaflet-sidebar": [
-        "dist/ngx-leaflet-sidebar/ngx-leaflet-sidebar",
-        "dist/ngx-leaflet-sidebar"
+      "ngx-leaflet-fullscreen": [
+        "dist/ngx-leaflet-fullscreen/ngx-leaflet-fullescreen",
+        "dist/ngx-leaflet-fullscreen"
       ]
     },
     "declaration": false,

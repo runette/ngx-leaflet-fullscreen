@@ -1,8 +1,7 @@
-
 /// <reference types='@runette/leaflet-fullscreen'/>
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import {Map, control, Control, FullscreenOptions} from 'leaflet';
-import '../../../../node_modules/@runette/leaflet-fullscreen/dist/Leaflet.fullscreen.js';
+import '../../../../node_modules/@runette/leaflet-fullscreen/dist/Leaflet.fullscreen.min.js';
 
 @Component({
   selector: 'leaflet-fullscreen-control',
@@ -10,8 +9,10 @@ import '../../../../node_modules/@runette/leaflet-fullscreen/dist/Leaflet.fullsc
   styleUrls: []
 })
 export class FullscreenControlComponent implements OnInit, OnDestroy {
-  private _map: Map;
-  public control: Control.Fullscreen;
+  @Input() options: FullscreenOptions = {};
+
+  private _map?: Map;
+  public control: Control.Fullscreen = new Control.Fullscreen(this.options);
 
   constructor() { }
 
@@ -19,14 +20,12 @@ export class FullscreenControlComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this._map.removeControl(this.control);
-    this._map.off('enterFullscreen');
-    this._map.off('exitFullscreen')
+    this._map?.removeControl(this.control);
+    this._map?.off('enterFullscreen');
+    this._map?.off('exitFullscreen')
   }
 
-  @Input() options: FullscreenOptions = {};
-
-  @Input() set map(map: Map){
+  @Input() set map(map: Map | undefined){
     if (map) { 
       this._map = map;
       this.control = control.fullscreen(this.options)
@@ -35,7 +34,7 @@ export class FullscreenControlComponent implements OnInit, OnDestroy {
       map.on('exitFullscreen', () => map.invalidateSize());
     };
   };
-  get map(): Map {
+  get map(): Map | undefined {
     return this._map
   };
 };

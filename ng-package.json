@@ -1,11 +1,11 @@
 {
   "$schema": "node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "dist/ngx-leaflet-sidebar",
+  "dest": "dist/ngx-leaflet-fullscreen",
   "lib": {
     "entryFile": "src/public-api.ts"
   },
   "allowedNonPeerDependencies":[
-    "leaflet-sidebar-v2",
+    "@runette/leaflet-fullscreen",
     "@types/leaflet"
   ]
 }

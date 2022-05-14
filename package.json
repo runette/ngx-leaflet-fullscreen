@@ -1,27 +1,8 @@
 {
-<<<<<<< HEAD
   "name": "@runette/ngx-leaflet-fullscreen",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Paul Harwood",
   "description": "Angular wrapper for the Leaflet-fullscreen control",
-=======
-  "name": "leaflet-fullscreen",
-  "version": "1.0.2",
-  "description": "A fullscreen control for Leaflet",
-  "main": "dist/Leaflet.fullscreen.js",
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "test": "jshint src/Leaflet.fullscreen.js",
-    "uglifyjs": "uglifyjs src/Leaflet.fullscreen.js > dist/Leaflet.fullscreen.min.js",
-    "sass": "sass -s compressed src/Leaflet.fullscreen.scss dist/Leaflet.fullscreen.min.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Leaflet/Leaflet.fullscreen.git"
-  },
->>>>>>> 27056dc (Rework Legacy PNG Icons with Font Awesome SVG)
   "keywords": [
     "angular",
     "leaflet",
@@ -29,7 +10,6 @@
     "fullscreen",
     "leaflet-fullscreen"
   ],
-<<<<<<< HEAD
   "repository": {
     "type": "git",
     "url": "git+https://github.com/runette/ngx-leaflet-fullscreen.git"
@@ -39,35 +19,12 @@
     "url": "https://github.com/runette/ngx-leaflet-fullscreen/issues"
   },
   "licence": "MIT",
-  "peerDependencies": {
-    "@angular/common": "^8.2.14",
-    "@angular/core": "^8.2.14"
-  },
   "dependencies": {
-    "@runette/leaflet-fullscreen": "^1.0.5",
-    "tslib": "^1.9.0"
-  },
-  "main": "bundles/runette-ngx-leaflet-fullscreen.umd.js",
-  "module": "fesm5/runette-ngx-leaflet-fullscreen.js",
-  "es2015": "fesm2015/runette-ngx-leaflet-fullscreen.js",
-  "esm5": "esm5/runette-ngx-leaflet-fullscreen.js",
-  "esm2015": "esm2015/runette-ngx-leaflet-fullscreen.js",
-  "fesm5": "fesm5/runette-ngx-leaflet-fullscreen.js",
-  "fesm2015": "fesm2015/runette-ngx-leaflet-fullscreen.js",
-  "typings": "runette-ngx-leaflet-fullscreen.d.ts",
-  "metadata": "runette-ngx-leaflet-fullscreen.metadata.json",
-  "sideEffects": false,
-  "directories": {
-    "lib": "lib"
+    "@runette/leaflet-fullscreen": "<=1.0.6",
+    "@types/leaflet": "*"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
-  "devDependencies": {
-    "jshint": "^2.13.1",
-    "sass": "^1.43.5",
-    "uglify-js": "^3.14.3"
->>>>>>> 27056dc (Rework Legacy PNG Icons with Font Awesome SVG)
+    "build:prod": "ng build ngx-leaflet-fullscreen"
   },
-  "license": "ISC"
+  "license": "MIT"
 }
