@@ -27,6 +27,7 @@ npm install @runette/ngx-leaflet-fullscreen
 This library needs to be imported into the application module:
 
 ```ts
+/// <reference types='@runette/leaflet-fullscreen' />
 import {NgxLeafletFullscreenModule} from '@runette/ngx-leaflet-fullscreen'
 
 imports: [
@@ -74,11 +75,9 @@ import { Map } from 'leaflet';
 
 
 export class OsmMapComponent implements OnInit, OnDestroy {
-  public map: Map;
-  public fullscreenOptions: {[key:string]:any} = {
-    position: 'topleft',
-    title: 'View Fullscreen',
-    titleCancel: 'Exit Fullscreen',
+  public map?: Map;
+  public fullscreenOptions: FullscreenOptions = {
+    position: 'topleft'
   };
 
   ...
