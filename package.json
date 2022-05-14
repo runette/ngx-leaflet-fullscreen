@@ -20,7 +20,7 @@
   },
   "licence": "MIT",
   "dependencies": {
-    "@runette/leaflet-fullscreen": "<=1.0.6",
+    "@runette/leaflet-fullscreen": ">=1.0.6",
     "@types/leaflet": "*"
   },
   "scripts": {
