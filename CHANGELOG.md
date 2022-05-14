@@ -1,7 +1,6 @@
-# Versions 1.0.5 - 1.0.7
 
-Maintenance builds to getthe metadata correct. No change in functionality.
+# 1.0.6
 
-# Version 1.0.4
+Updated to Angular 12+. The Library is now built using an Ivy partial compile that should allow compatibility with any version of Angular.io after v12.0.0. Tested with Angular 13.
 
-Changes the build model to ng-packagr as per the current Angular.io documentation and using a partial Ivy compilation.
+Updates to the README to refolect some changes in TypeScript - particularly around stricteness of typing.
