@@ -1,7 +1,11 @@
-on: push
+on:
+  pull_request:
+    types: [ closed ]
+
 name: Build Angular
 jobs:
   build:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,7 +27,7 @@ jobs:
           npm i
           npm run build:prod
           cd dist
-          mv ../../.npmrc ngx-leaflet-fullscreen
+          mv ../.npmrc ngx-leaflet-fullscreen
           tar -czf release.tgz ngx-leaflet-fullscreen/
           cd ngx-leaflet-fulklscreen
           npm publish --access public
