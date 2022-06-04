@@ -19,7 +19,7 @@
               "tsConfig": "tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "ptsconfig.lib.json"
+              "tsConfig": "tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
