@@ -1,6 +1,6 @@
 {
   "name": "@runette/ngx-leaflet-fullscreen",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Paul Harwood",
   "description": "Angular wrapper for the Leaflet-fullscreen control",
   "keywords": [
